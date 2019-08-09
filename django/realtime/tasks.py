@@ -3,7 +3,7 @@ import redis
 from celery import task
 
 
-redis_client = redis.StrictRedis(host='redis', port=6379, db=0)
+redis_client = redis.StrictRedis(host='localhost', port=6379, db=0) # host='redis', port=6379, db=0
 
 # To obtain the task id, we set bind=True
 @task(bind=True)

@@ -2,7 +2,8 @@ var http = require("http").Server();
 var io = require("socket.io")(http);
 var redis = require("redis");
 
-var redisClient = redis.createClient(6379, "redis"); // name used in docker file
+var redisClient = redis.createClient(); // name used in docker file
+// 6379, "redis"
 
 // when client sends a socket,
 // subscribe to channel and send to client a message
